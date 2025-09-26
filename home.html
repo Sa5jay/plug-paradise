@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" crossorigin="anonymous">
+    <title>EV Charging Stations</title>
+    <style>
+        /* Aesthetic Gradient Background with Subtle Texture */
+        body {
+            /* Solid light blue background */
+            background-color: #b3e0ff;
+
+            /* Subtle texture added to the background */
+            background-image: url('https://www.transparenttextures.com/patterns/abstract-tile-2.png');
+            background-repeat: repeat;
+            font-family: 'Arial', Helvetica, sans-serif;
+        }
+
+        /* Smooth animation for the gradient */
+        @keyframes gradientAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        /* Enhanced Navbar */
+        .navbar {
+            background-color: #2a2d36;
+            padding: 15px 0;
+        }
+
+        .navbar a {
+            color: #fff;
+            text-transform: uppercase;
+            font-weight: 500;
+            padding: 8px 15px;
+            transition: background-color 0.3s;
+        }
+
+        .navbar a:hover {
+            background-color: #444;
+        }
+
+        .navbar-toggler-icon {
+            background-color: #fff;
+        }
+
+        /* Background Image */
+        .bg-image {
+            margin-bottom: 5%;
+            width: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        /* Centered InShot.gif */
+        .gif-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+            margin-bottom: 5%;
+        }
+
+        .gif-container img {
+            max-width: 80%;
+            max-height: 100%;
+        }
+
+        /* Heading Styles */
+        h2 {
+            margin-bottom: 3%;
+            margin-top: 3%;
+            font-size: 2rem;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .container1 {
+            display: flex;
+            justify-content: center;
+            margin-top: 2%;
+        }
+
+        .container2 {
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        /* About Us Section */
+        .about-text {
+            color: #5a5a5a;
+            font-size: 1.1rem;
+            line-height: 1.7;
+            margin-left: 5%;
+            margin-right: 5%;
+        }
+
+        /* Footer Styling */
+        .footer {
+            background: #2a2d36;
+            color: #bbb;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .footer .row a {
+            text-decoration: none;
+            color: #bbb;
+            font-weight: 500;
+            padding: 8px 15px;
+            transition: color 0.3s;
+        }
+
+        .footer .row a:hover {
+            color: #fff;
+        }
+
+        .footer .row ul {
+            padding: 0;
+            list-style: none;
+        }
+
+        .footer .row ul li {
+            display: inline-block;
+            margin: 0 15px;
+        }
+
+        /* Services Section */
+        .services img {
+            max-width: 80%;
+            margin-bottom: 15px;
+        }
+
+        .services .service-text {
+            font-size: 1rem;
+            color: #333;
+        }
+
+        /* Adding background color to specific sections */
+        #about {
+            background: linear-gradient(to right, #b3e0ff);
+            color: rgb(0, 0, 0);
+            padding: 40px 0;
+        }
+
+        #stations {
+            background: linear-gradient(to right, #b3e0ff);
+            color: rgb(0, 0, 0);
+            padding: 40px 0;
+        }
+
+        #services {
+            background: linear-gradient(to right, #b3e0ff);
+            color: rgb(0, 0, 0);
+            padding: 40px 0;
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 1200px) {
+            .about-text {
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .bg-image {
+                width: 100%;
+                height: 250px;
+            }
+
+            .container1 {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .about-text {
+                font-size: 0.95rem;
+                margin-left: 0;
+                margin-right: 0;
+            }
+
+            .footer .row {
+                text-align: left;
+                padding: 20px;
+            }
+
+            .footer .row ul li {
+                display: block;
+                margin: 10px 0;
+            }
+
+            .footer .row a {
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            .footer .row ul li {
+                display: block;
+                margin: 5px 0;
+            }
+
+            .footer .row a {
+                font-size: 0.8rem;
+            }
+
+            .container1 {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="http://127.0.0.1:5500/index.html" target="_blank">
+                <img src="image/pp_logo.png" width="200" height="100" alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="navbar-nav mx-auto">
+                    <a class="nav-item nav-link active" href="#about">About</a>
+                    <a class="nav-item nav-link" href="#stations">Stations</a>
+                    <a class="nav-item nav-link" href="#services">Services</a>
+                    <a class="nav-item nav-link" href="#footer">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Centered GIF -->
+    <div class="gif-container">
+        <img src="image/InShot.gif" alt="EV Charging Animation">
+    </div>
+
+    <!-- About Us Section -->
+    <div class="container" id="about">
+        <h2 class="container2">ABOUT US</h2>
+        <div class="container1">
+            <div class="image">
+                <img src="image/about.gif" alt="About Us Image">
+            </div>
+            <div class="about-text">
+                <p>An EV charging station is a device that allows drivers to charge up their electric cars while they’re parked at home or work. The station has two main components: A power source and a connector. The power source converts electricity into DC current, which is then converted into AC current using inverters.</p>
+                <p>You can search for the nearest charging station from our maps API page and use it to navigate your way to the place.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Our Stations Section -->
+    <div class="container" id="stations">
+        <h2 class="container2">OUR STATIONS</h2>
+        <div class="container1">
+            <div class="text">
+                <p><strong>1. Power</strong><br>Low-carbon energy sources such as wind farms and photovoltaic (PV) systems turn energy from wind or light into the electricity needed to meet the needs of commercial, industrial, and residential customers.</p>
+                <p><strong>2. Business, Retail and Fleet Charging</strong><br>Charging while parked at work or during leisure activities is a convenient way to recharge.</p>
+                <p><strong>3. Charging On-the-Go</strong><br>On forecourts, electric fast charging services are developed for drivers who need to recharge during their journeys.</p>
+                <p><strong>4. Home Charging</strong><br>Charging at home is often the most convenient and cost-effective way for private customers to recharge their cars.</p>
+            </div>
+            <div class="image">
+                <img src="image/first.jpg" alt="Our Stations Image">
+            </div>
+        </div>
+    </div>
+
+    <!-- Services Section -->
+    <div class="container" id="services">
+        <h2 class="container2">OUR SERVICES</h2>
+        <div class="row">
+            <div class="col-lg-4 services">
+                <img src="image/circle1.jpg" alt="Search Stations">
+                <h4><strong>Search Stations</strong></h4>
+                <p class="service-text">You can now search nearby charging stations from your current location and see how many charging slots are available at that place.</p>
+                <p><a class="btn btn-info" href="ev_search.html">Search Stations</a></p>
+            </div>
+            <div class="col-lg-4 services">
+                <img class="find" src="image/route1.jpg" alt="Find Route">
+                <h4><strong>Finding Route</strong></h4>
+                <p class="service-text">Find your destination path easily from your current location. This feature enables you to find the route with just a few clicks.</p>
+                <p><a class="btn btn-info" href="ev_routing.html">Find Route</a></p>
+            </div>
+            <div class="col-lg-4 services">
+                <img src="image/circle3.jpg" alt="Traffic Detector">
+                <h4><strong>Traffic Detector</strong></h4>
+                <p class="service-text">Get real-time traffic updates on your way to your destination. Stay informed and travel safely!</p>
+                <p><a class="btn btn-info" href="traffic.html">Detect Traffic</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer">
+            <div class="row">
+                <ul>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#services">Our Services</a></li>
+                    <li><a href="#stations">Our Stations</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Logo</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+</body>
+
+</html>
